@@ -1,31 +1,19 @@
-import PerformanceDetail from './performance-detail.js';
+import PerformanceItem from './performance-item.js';
 
 const Performance = (data, $selector) => {
-  const list = data.list
-    .map((d, index) => {
-      return `<button class="show-detail" id=${index}><dt>${d.artist}</dt><dd>${d.title}</dd></a><dd>${d.type}</dd></button>`;
-    })
-    .join('');
-
-  $selector.innerHTML = `<h3>${data.title}</h3><dl>${list}</dl>`;
-
-  const closeDetailPage = () => {
-    alert('close!');
+  const createList = (data) => {
+    const ul = document.createElement('ul');
+    data.list.forEach((item) => {
+      ul.appendChild(PerformanceItem(item));
+    });
+    $selector.appendChild(ul);
   };
 
-  const details = document.querySelectorAll('.show-detail');
-  details.forEach((element) => {
-    element.addEventListener('click', (e) => {
-      const detailPage = PerformanceDetail(
-        data.list[element.id],
-        element.id,
-        closeDetailPage
-      );
+  const render = () => {
+    createList(data);
+  };
 
-      element.parentElement.appendChild(detailPage);
-      element.hidden = true;
-    });
-  });
+  render();
 };
 
 export default Performance;
