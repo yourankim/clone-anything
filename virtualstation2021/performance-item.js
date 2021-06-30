@@ -6,18 +6,15 @@ const PerformanceItem = (data) => {
 
   const createSummary = (data) => {
     const el = document.createElement('button');
-    el.setAttribute('class', 'summary');
-    el.dataset.id = data.id;
-    el.innerText = 'summary';
+    el.setAttribute('class', 'clickable');
+    el.innerHTML = `<div class='summary'><p class="clickable">${data.artist}</p><p class="clickable">${data.title}</p><p>${data.type}</p></div>`;
     return el;
   };
 
   const createDetail = (data, summary, onClick) => {
-    const detail = document.createElement('section');
+    const detail = document.createElement('article');
     detail.setAttribute('class', 'detail');
-
-    const article = document.createElement('article');
-    article.innerHTML =
+    detail.innerHTML =
       `<h3>${data.artist}</h3>` +
       `<h3>${data.title}<h3>` +
       `<h3>${data.type}</h3>` +
@@ -31,7 +28,6 @@ const PerformanceItem = (data) => {
       onClick(summary, detail, false)
     );
     detail.appendChild(closeButton);
-    detail.appendChild(article);
     detail.hidden = true;
 
     return detail;

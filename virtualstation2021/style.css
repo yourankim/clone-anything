@@ -1,5 +1,18 @@
+button,
+h2 {
+  font-size: 1em;
+}
+
+p {
+  margin: 2px;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: transparent;
   width: 100%;
@@ -18,12 +31,45 @@ header h1 {
   margin: 20px 10px 20px 10px;
 }
 
-button.lang {
+.clickable {
   background-color: transparent;
   border: solid 0;
   cursor: pointer;
 }
 
-button.lang:hover {
+.clickable:hover {
   color: rgba(0, 0, 0, 0.411);
+}
+
+.clickable > .summary > p:last-child {
+  color: #000000;
+}
+
+section.performance {
+  text-align: center;
+  font-size: 1em;
+}
+
+section.performance > ul {
+  list-style: none;
+}
+
+section.performance > ul > li {
+  margin: 24px;
+}
+
+section.performance ~ p {
+  font-size: 1em;
+}
+
+div.summary > p {
+  padding: 1px;
+}
+
+div.summary > p:nth-child(2) {
+  border-bottom: 1px solid;
+}
+
+div.summary > p:last-child {
+  font-size: 0.8em;
 }
