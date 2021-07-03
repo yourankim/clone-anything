@@ -1,13 +1,15 @@
 const PerformanceItem = (data) => {
   const onToggleDetail = (summary, detail, isOpenDetail) => {
+    console.log(summary);
+    console.log(detail);
     summary.hidden = isOpenDetail;
     detail.hidden = !isOpenDetail;
   };
 
   const createSummary = (data) => {
     const el = document.createElement('button');
-    el.setAttribute('class', 'clickable');
-    el.innerHTML = `<div class='summary'><p class="clickable">${data.artist}</p><p class="clickable">${data.title}</p><p>${data.type}</p></div>`;
+    el.setAttribute('class', 'item__button');
+    el.innerHTML = `<p>${data.artist}</p><p>${data.title}</p><p>${data.type}</p>`;
     return el;
   };
 
@@ -20,14 +22,14 @@ const PerformanceItem = (data) => {
       `<h3>${data.type}</h3>` +
       `<h3>${data.from}, ${data.genre}, ${data.minutes}분</h3>` +
       `<figure><img src="./static/${data.image}" alter="${data.imageAlterText}"><figurecaption>${data.imageCaption}</figurecaption></figure>` +
-      `<pre>${data.description}</pre>`;
+      `<p>${data.description}</p>`;
 
     const closeButton = document.createElement('button');
     closeButton.innerText = 'X';
     closeButton.addEventListener('click', (e) =>
       onClick(summary, detail, false)
     );
-    detail.appendChild(closeButton);
+    detail.prepend(closeButton);
     detail.hidden = true;
 
     return detail;
@@ -38,7 +40,7 @@ const PerformanceItem = (data) => {
     const summary = createSummary(data);
     const detail = createDetail(data, summary, onToggleDetail);
     summary.addEventListener('click', (e) =>
-      onToggleDetail(e.target, detail, true)
+      onToggleDetail(summary, detail, true)
     );
     li.appendChild(summary);
     li.appendChild(detail);

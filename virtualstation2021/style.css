@@ -1,14 +1,25 @@
-button,
-h2 {
-  font-size: 1em;
+* {
+  font-family: 'Noto Serif KR', 'Noto Serif', serif;
 }
 
-p {
-  margin: 2px;
+button,
+h2 {
+  font-size: 1rem;
 }
 
 ul {
   padding-inline-start: 0;
+  list-style: none;
+}
+
+p {
+  margin: 6px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
 }
 
 header {
@@ -20,38 +31,30 @@ header {
   justify-content: space-between;
 }
 
-div.title {
+div.header__title {
   display: flex;
   justify-content: space-around;
 }
 
 header h1 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-weight: 400;
   margin: 20px 10px 20px 10px;
 }
 
-.clickable {
+button {
   background-color: transparent;
   border: solid 0;
   cursor: pointer;
 }
 
-.clickable:hover {
+button:hover {
   color: rgba(0, 0, 0, 0.411);
-}
-
-.clickable > .summary > p:last-child {
-  color: #000000;
 }
 
 section.performance {
   text-align: center;
-  font-size: 1em;
-}
-
-section.performance > ul {
-  list-style: none;
+  font-size: 1rem;
 }
 
 section.performance > ul > li {
@@ -59,17 +62,24 @@ section.performance > ul > li {
 }
 
 section.performance ~ p {
-  font-size: 1em;
+  font-size: 1rem;
+  padding: 3px;
 }
 
-div.summary > p {
-  padding: 1px;
+.item__button {
+  font-weight: 500;
 }
 
-div.summary > p:nth-child(2) {
+.item__button > p:last-child {
+  color: rgba(0, 0, 0, 0.712);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.item__button > p:nth-child(2) {
   border-bottom: 1px solid;
 }
 
-div.summary > p:last-child {
-  font-size: 0.8em;
+article.detail {
+  border: 1px solid rgba(0, 0, 0, 0.411);
 }
