@@ -82,4 +82,72 @@ section.performance ~ p {
 
 article.detail {
   border: 1px solid rgba(0, 0, 0, 0.411);
+  position: relative;
+}
+
+/*
+
+close button 1: csslayout.io (https://csslayout.io/patterns/close-button/)
+
+button.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+button.close div {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.712);
+}
+
+
+button.close div:first-child {
+  left: 0px;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+
+button.close div:last-child {
+  left: 50%;
+  top: 0px;
+  height: 100%;
+  width: 1px;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+*/
+
+/*
+close button 2: "Virtual Station" original css rules
+*/
+
+button.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.close div {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.712);
+}
+
+button.close div:first-child {
+  height: 1px;
+  width: 100%;
+  transform: rotate(45deg);
+}
+
+button.close div:last-child {
+  height: 1px;
+  width: 100%;
+  transform: rotate(-45deg);
 }

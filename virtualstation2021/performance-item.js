@@ -25,7 +25,8 @@ const PerformanceItem = (data) => {
       `<p>${data.description}</p>`;
 
     const closeButton = document.createElement('button');
-    closeButton.innerText = 'X';
+    closeButton.className = 'close';
+    closeButton.innerHTML = '<div></div><div></div>';
     closeButton.addEventListener('click', (e) =>
       onClick(summary, detail, false)
     );
