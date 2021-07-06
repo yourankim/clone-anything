@@ -1,25 +1,17 @@
 * {
   font-family: 'Noto Serif KR', 'Noto Serif', serif;
+  font-size: 13.5px;
 }
 
-button,
-h2 {
-  font-size: 1rem;
+section {
+  padding: 1%;
+  text-align: center;
+  word-break: keep-all;
 }
 
 ul {
   padding-inline-start: 0;
   list-style: none;
-}
-
-p {
-  margin: 6px;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 300;
 }
 
 header {
@@ -37,9 +29,25 @@ div.header__title {
 }
 
 header h1 {
-  font-size: 1.1rem;
   font-weight: 400;
   margin: 20px 10px 20px 10px;
+}
+
+.item--heading {
+  text-align: center;
+}
+
+.item--content {
+  text-align: left;
+}
+
+section.video {
+  height: 56.25vw;
+}
+
+section.video iframe {
+  width: 100%;
+  height: 100%;
 }
 
 button {
@@ -50,15 +58,6 @@ button {
 
 button:hover {
   color: rgba(0, 0, 0, 0.411);
-}
-
-section.performance {
-  text-align: center;
-  font-size: 1rem;
-}
-
-section.performance > ul > li {
-  margin: 24px;
 }
 
 section.performance ~ p {

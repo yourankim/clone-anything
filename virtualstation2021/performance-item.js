@@ -1,14 +1,12 @@
 const PerformanceItem = (data) => {
   const onToggleDetail = (summary, detail, isOpenDetail) => {
-    console.log(summary);
-    console.log(detail);
     summary.hidden = isOpenDetail;
     detail.hidden = !isOpenDetail;
   };
 
   const createSummary = (data) => {
     const el = document.createElement('button');
-    el.setAttribute('class', 'item__button');
+    el.setAttribute('class', 'item__button item--heading');
     el.innerHTML = `<p>${data.artist}</p><p>${data.title}</p><p>${data.type}</p>`;
     return el;
   };
