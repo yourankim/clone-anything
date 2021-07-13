@@ -1,7 +1,7 @@
 import PerformanceItem from './performance-item.js';
 
 const Performance = (data, $selector) => {
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerText = data.title;
   const createList = (data) => {
     const ul = document.createElement('ul');

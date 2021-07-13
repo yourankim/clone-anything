@@ -1,6 +1,17 @@
 * {
   font-family: 'Noto Serif KR', 'Noto Serif', serif;
-  font-size: 13.5px;
+}
+
+html {
+  font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+p,
+button {
+  font-size: 1rem;
 }
 
 section {
@@ -61,7 +72,6 @@ button:hover {
 }
 
 section.performance ~ p {
-  font-size: 1rem;
   padding: 3px;
 }
 
@@ -71,7 +81,6 @@ section.performance ~ p {
 
 .item__button > p:last-child {
   color: rgba(0, 0, 0, 0.712);
-  font-size: 0.8rem;
   font-weight: 400;
 }
 
