@@ -28,20 +28,21 @@ ul {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   background-color: transparent;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 div.header__title {
   display: flex;
+  gap: 3vw;
   justify-content: space-around;
 }
 
 header h1 {
   font-weight: 400;
-  margin: 20px 10px 20px 10px;
 }
 
 .item--heading {
@@ -64,6 +65,7 @@ section.video iframe {
 button {
   background-color: transparent;
   border: solid 0;
+  padding: 0;
   cursor: pointer;
 }
 
