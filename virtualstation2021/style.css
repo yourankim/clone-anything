@@ -1,9 +1,14 @@
 * {
   font-family: 'Noto Serif KR', 'Noto Serif', serif;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 13px;
+}
+
+figure {
+  margin: 0;
 }
 
 h1,
@@ -12,6 +17,17 @@ h3,
 p,
 button {
   font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+figure.canvas {
+  height: 100vh;
+  display: flex;
+  align-items: center; /* 어떻게 가운데 */
 }
 
 section {
@@ -29,10 +45,11 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: transparent;
-  width: 100%;
+  width: 100vw;
+  background-color: #fff;
   display: flex;
-  justify-content: space-around;
+  padding: 4%;
+  justify-content: space-between;
 }
 
 div.header__title {
@@ -42,7 +59,8 @@ div.header__title {
 }
 
 header h1 {
-  font-weight: 400;
+  font-weight: 600;
+  margin: 0;
 }
 
 .item--heading {
@@ -60,6 +78,10 @@ section.video {
 section.video iframe {
   width: 100%;
   height: 100%;
+}
+
+article.detail {
+  padding: 4%;
 }
 
 button {
