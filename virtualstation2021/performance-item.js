@@ -20,7 +20,7 @@ const PerformanceItem = (data) => {
       `<h3>${data.type}</h3>` +
       `<h3>${data.from}, ${data.genre}, ${data.minutes}분</h3>` +
       `<figure><img src="./static/${data.image}" alter="${data.imageAlterText}"><figurecaption>${data.imageCaption}</figurecaption></figure>` +
-      `<p>${data.description}</p>`;
+      `<p class="item--content">${data.description}</p>`;
 
     const closeButton = document.createElement('button');
     closeButton.className = 'close';

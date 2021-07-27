@@ -7,6 +7,7 @@ html {
   font-size: 13px;
 }
 
+body,
 figure {
   margin: 0;
 }
@@ -31,7 +32,7 @@ figure.canvas {
 }
 
 section {
-  padding: 1%;
+  padding: 4vw;
   text-align: center;
   word-break: keep-all;
 }
@@ -72,7 +73,9 @@ header h1 {
 }
 
 section.video {
-  height: 56.25vw;
+  margin: 0 5vw;
+  height: calc(315 * 90vw / 560);
+  padding: 0;
 }
 
 section.video iframe {
@@ -115,6 +118,9 @@ section.performance ~ p {
 article.detail {
   border: 1px solid rgba(0, 0, 0, 0.411);
   position: relative;
+  z-index: -1;
+  margin: 3% 0;
+  
 }
 
 /*
