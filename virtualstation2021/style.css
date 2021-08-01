@@ -18,6 +18,8 @@ h3,
 p,
 button {
   font-size: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -29,6 +31,11 @@ figure.canvas {
   height: 100vh;
   display: flex;
   align-items: center; /* 어떻게 가운데 */
+}
+
+figure > figcaption {
+  text-align: left;
+  font-size: 0.9rem;
 }
 
 section {
@@ -51,6 +58,7 @@ header {
   display: flex;
   padding: 4%;
   justify-content: space-between;
+  z-index: 9;
 }
 
 div.header__title {
@@ -66,10 +74,12 @@ header h1 {
 
 .item--heading {
   text-align: center;
+  margin: 20px 0;
 }
 
 .item--content {
   text-align: left;
+  margin: 10px 0;
 }
 
 section.video {
@@ -102,25 +112,27 @@ section.performance ~ p {
   padding: 3px;
 }
 
-.item__button {
+.list-item--heading {
   font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.item__button > p:last-child {
+.list-item--heading > p:last-child {
   color: rgba(0, 0, 0, 0.712);
   font-weight: 400;
+  font-size: 0.9rem;
 }
 
-.item__button > p:nth-child(2) {
+.list-item--heading > p:nth-child(2) {
+  display: inline;
   border-bottom: 1px solid;
 }
 
 article.detail {
   border: 1px solid rgba(0, 0, 0, 0.411);
   position: relative;
-  z-index: -1;
   margin: 3% 0;
-  
 }
 
 /*
@@ -164,13 +176,11 @@ close button 2: "Virtual Station" original css rules
 
 button.close {
   position: absolute;
-  top: 20px;
   right: 20px;
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 button.close div {
@@ -188,4 +198,8 @@ button.close div:last-child {
   height: 1px;
   width: 100%;
   transform: rotate(-45deg);
+}
+
+hr {
+  width: 92vw;
 }

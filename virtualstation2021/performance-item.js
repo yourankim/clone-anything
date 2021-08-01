@@ -6,7 +6,7 @@ const PerformanceItem = (data) => {
 
   const createSummary = (data) => {
     const el = document.createElement('button');
-    el.setAttribute('class', 'item__button item--heading');
+    el.setAttribute('class', 'list-item--heading');
     el.innerHTML = `<p>${data.artist}</p><p>${data.title}</p><p>${data.type}</p>`;
     return el;
   };
@@ -15,11 +15,13 @@ const PerformanceItem = (data) => {
     const detail = document.createElement('article');
     detail.setAttribute('class', 'detail');
     detail.innerHTML =
-      `<h3>${data.artist}</h3>` +
-      `<h3>${data.title}<h3>` +
-      `<h3>${data.type}</h3>` +
-      `<h3>${data.from}, ${data.genre}, ${data.minutes}분</h3>` +
-      `<figure><img src="./static/${data.image}" alter="${data.imageAlterText}"><figurecaption>${data.imageCaption}</figurecaption></figure>` +
+      `<div class='list-item--heading'>` +
+      `<p>${data.artist}</p>` +
+      `<p>${data.title}</p>` +
+      `<p>${data.type}</p>` +
+      `</div>` +
+      `<p class="item--content">${data.from}, ${data.genre}, ${data.minutes}분</p>` +
+      `<figure><img src="./static/${data.image}" alter="${data.imageAlterText}"><figcaption>${data.imageCaption}</figcaption></figure>` +
       `<p class="item--content">${data.description}</p>`;
 
     const closeButton = document.createElement('button');
