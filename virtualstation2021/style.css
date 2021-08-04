@@ -7,6 +7,23 @@ html {
   font-size: 13px;
 }
 
+@media (min-width: 480px) {
+  html {
+    font-size: 17px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  figure.canvas .canvas-img {
+    display: block;
+  }
+  figure.canvas .canvas-img-mobile {
+    display: none;
+  }
+}
+
 body,
 figure {
   margin: 0;
@@ -30,7 +47,11 @@ img {
 figure.canvas {
   height: 100vh;
   display: flex;
-  align-items: center; /* 어떻게 가운데 */
+  align-items: center; /* 수직정렬 어떻게 가능한거지 */
+}
+
+.canvas-img {
+  display: none;
 }
 
 figure > figcaption {
@@ -53,10 +74,10 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   display: flex;
-  padding: 4%;
+  padding: 15px;
   justify-content: space-between;
   z-index: 9;
 }
@@ -68,7 +89,7 @@ div.header__title {
 }
 
 header h1 {
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
 }
 
